@@ -4,9 +4,21 @@
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
+  @include respond(tablet-portrait) {
+    padding: 8rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 6rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include respond(tablet-portrait) {
+      margin: 6rem;
+    }
   }
 
   &__logo {
@@ -17,6 +29,11 @@
     border-top: 1px solid $color-dark-grey;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -53,5 +70,10 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include respond(tablet-portrait) {
+      float: none;
+      width: 80%;
+    }
   }
 }
